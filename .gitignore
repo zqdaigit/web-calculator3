@@ -1,0 +1,8 @@
+node_modules/
+.env
+*.pem
+credentials.json
+dist/
+build/
+coverage/
+*.log

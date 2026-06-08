@@ -1,0 +1,13 @@
+{
+  "project_id": "c03f1186-a70c-4b8b-a2dd-bd0f3a15b80f",
+  "project_title": "web计算器项目2",
+  "resources": [
+    {
+      "id": "c8053114-0cef-4bcd-9800-c2ac56ba8f90",
+      "resource_type": "github_repo",
+      "resource_ref": {
+        "url": "https://github.com/zqdaigit/web-calculator3"
+      }
+    }
+  ]
+}
