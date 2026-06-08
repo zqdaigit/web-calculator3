@@ -6,3 +6,6 @@ dist/
 build/
 coverage/
 *.log
+.agent_context/
+.multica/
+.opencode/
