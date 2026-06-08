@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>简易计算器静态交互原型</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <main class="app-shell" aria-label="简易计算器原型">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">WS-16 Prototype</p>
+          <h1>简易计算器</h1>
+        </div>
+        <div class="toolbar">
+          <button class="icon-button" id="themeToggle" type="button" aria-label="切换深浅色主题">
+            <span id="themeIcon" aria-hidden="true">☀</span>
+          </button>
+          <button class="icon-button history-trigger" id="openHistory" type="button" aria-label="打开历史记录">
+            <span aria-hidden="true">↺</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <section class="calculator-card" aria-label="计算器">
+          <div class="display" aria-live="polite">
+            <div class="formula" id="formulaDisplay">准备计算</div>
+            <div class="result" id="resultDisplay">0</div>
+          </div>
+
+          <div class="quick-actions" aria-label="快捷操作">
+            <button data-action="percent" class="quick-key" type="button">%</button>
+            <span>百分比：将当前数值转换为百分数</span>
+          </div>
+
+          <div class="keypad" aria-label="计算器按键">
+            <button data-action="clear" class="key control" type="button">C</button>
+            <button data-action="clear-entry" class="key control" type="button">CE</button>
+            <button data-action="backspace" class="key control" type="button">退格</button>
+            <button data-operator="/" class="key operator" type="button">÷</button>
+
+            <button data-number="7" class="key" type="button">7</button>
+            <button data-number="8" class="key" type="button">8</button>
+            <button data-number="9" class="key" type="button">9</button>
+            <button data-operator="*" class="key operator" type="button">×</button>
+
+            <button data-number="4" class="key" type="button">4</button>
+            <button data-number="5" class="key" type="button">5</button>
+            <button data-number="6" class="key" type="button">6</button>
+            <button data-operator="-" class="key operator" type="button">−</button>
+
+            <button data-number="1" class="key" type="button">1</button>
+            <button data-number="2" class="key" type="button">2</button>
+            <button data-number="3" class="key" type="button">3</button>
+            <button data-operator="+" class="key operator" type="button">+</button>
+
+            <button data-action="toggle-sign" class="key control" type="button">+/-</button>
+            <button data-number="0" class="key" type="button">0</button>
+            <button data-action="decimal" class="key" id="decimalKey" type="button">.</button>
+            <button data-action="equals" class="key equals" type="button">=</button>
+          </div>
+          <p class="hint">支持物理键盘：数字、+、-、*、/、Enter、Backspace、Esc。</p>
+        </section>
+
+        <aside class="history-panel" id="historyPanel" aria-label="历史记录">
+          <div class="history-header">
+            <div>
+              <p class="eyebrow">Local history</p>
+              <h2>历史记录</h2>
+            </div>
+            <button class="icon-button close-history" id="closeHistory" type="button" aria-label="关闭历史记录">×</button>
+          </div>
+          <div class="history-list" id="historyList"></div>
+          <button class="secondary-button" id="clearHistory" type="button">清除历史记录</button>
+        </aside>
+      </section>
+    </main>
+
+    <div class="overlay" id="overlay" hidden></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
