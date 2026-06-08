@@ -6,9 +6,9 @@
 
 ## [In Progress]
 - [ ] [WS-18] 定义简易计算器的产品需求规范 (BA) (指派给: 需求解析 | DoD: 在 requirements/WS-16-simple-web-calculator.prd.md 交付 PRD)
-- [ ] [WS-19] 规划简易计算器的界面交互与用户流程 (UX) (指派给: 交互设计师 | DoD: 在 designs/WS-16-simple-web-calculator.ux.md 交付交互设计方案)
 
 ## [Review]
 
 ## [Done]
 - [x] [WS-17] 初始化 Git 仓库与协作目录 (Git Init) (指派给: GitHub初始化)
+- [x] [WS-19] 规划简易计算器的界面交互与用户流程 (UX) (指派给: 交互设计师 | DoD: 在 designs/WS-16-simple-web-calculator.ux.md 交付交互设计方案)
