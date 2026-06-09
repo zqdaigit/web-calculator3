@@ -3,6 +3,8 @@
 ## [Backlog]
 
 ## [In Progress]
+- [ ] [WS-23] WS-22 需求文档更新 (BA) (指派给: 需求解析 | DoD: 在 requirements/WS-22-calculator-bugfix.prd.md 交付 PRD)
+- [ ] [WS-24] WS-22 交互设计更新 (UX) (指派给: 交互设计师 | DoD: 在 designs/WS-22-calculator-bugfix.ux.md 交付交互设计方案)
 
 ## [Review]
 
