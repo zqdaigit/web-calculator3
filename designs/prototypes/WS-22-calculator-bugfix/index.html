@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WS-22 计算器交互原型</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">WS-22 · Bugfix Prototype</p>
+          <h1>桌面计算器</h1>
+        </div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换主题">
+          <span id="themeIcon">☀</span><span>主题</span>
+        </button>
+      </header>
+
+      <section class="workspace">
+        <section class="calculator-card" aria-label="计算器">
+          <div class="display" aria-live="polite">
+            <div class="formula" id="formulaDisplay">准备计算</div>
+            <div class="result" id="resultDisplay">0</div>
+            <div class="display-tip" id="displayTip">请输入运算符（+、-、*、/）后再按 Enter 键计算</div>
+          </div>
+
+          <div class="keypad" aria-label="计算器按键">
+            <button class="key control" data-action="clear" type="button">C</button>
+            <button class="key control" data-action="clear-entry" type="button">CE</button>
+            <button class="key control" data-action="backspace" type="button">退格</button>
+            <button class="key operator" data-operator="/" type="button">÷</button>
+            <button class="key" data-number="7" type="button">7</button>
+            <button class="key" data-number="8" type="button">8</button>
+            <button class="key" data-number="9" type="button">9</button>
+            <button class="key operator" data-operator="*" type="button">×</button>
+            <button class="key" data-number="4" type="button">4</button>
+            <button class="key" data-number="5" type="button">5</button>
+            <button class="key" data-number="6" type="button">6</button>
+            <button class="key operator" data-operator="-" type="button">−</button>
+            <button class="key" data-number="1" type="button">1</button>
+            <button class="key" data-number="2" type="button">2</button>
+            <button class="key" data-number="3" type="button">3</button>
+            <button class="key operator" data-operator="+" type="button">+</button>
+            <button class="key control" data-action="toggle-sign" type="button">+/-</button>
+            <button class="key" data-number="0" type="button">0</button>
+            <button class="key" data-action="decimal" type="button">.</button>
+            <button class="key equals" data-action="equals" type="button">=</button>
+          </div>
+        </section>
+
+        <aside class="history-panel" aria-label="历史记录">
+          <div>
+            <p class="eyebrow">Local History</p>
+            <h2>历史记录</h2>
+          </div>
+          <div class="history-list" id="historyList"></div>
+          <button class="clear-history" id="clearHistory" type="button">清除历史记录</button>
+        </aside>
+      </section>
+
+      <footer class="keyboard-guide">
+        <span>物理键盘</span>
+        <kbd>0-9</kbd><kbd>.</kbd><kbd>+ − × ÷</kbd><kbd>Enter / =</kbd><kbd>Backspace</kbd><kbd>Esc / Delete</kbd>
+      </footer>
+    </main>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
